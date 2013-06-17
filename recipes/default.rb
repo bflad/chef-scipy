@@ -8,8 +8,7 @@ else
   include_recipe "scipy::package"
 end
 
-if node['platform'] == "fedora" && node['platform_family'] <= 17
-  python_pip "ipython" do
-    action :upgrade
-  end
+python_pip "ipython" do
+  action :upgrade
+  only_if { node['platform'] == "fedora" && node['platform_family'] <= 17 }
 end
