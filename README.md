@@ -15,7 +15,11 @@ Installs [SciPy](http://www.scipy.org) according to [Scipy Stack 1.0 specificati
 
 ### Cookbooks
 
-None
+[Opscode Cookbooks](https://github.com/opscode-cookbooks/)
+
+* [apt](https://github.com/opscode-cookbooks/apt)
+* [python](https://github.com/opscode-cookbooks/python)
+* [yum](https://github.com/opscode-cookbooks/yum)
 
 ## Attributes
 
