@@ -29,7 +29,7 @@ Attribute | Description | Type | Default
 ----------|-------------|------|--------
 install_type | "package" or "source" | String | package
 packages | OS packages for installation | Array of Strings | auto-detected (see attributes/default.rb)
-pip_packages | PIP packages for installation | Array of Strings | auto-detected (see attributes/default.rb)
+pip_packages | PIP packages for installation in requirements format | Array of Strings | auto-detected (see attributes/default.rb)
 
 ## Recipes
 
@@ -43,6 +43,43 @@ pip_packages | PIP packages for installation | Array of Strings | auto-detected 
 
 * Optionally set `node['scipy']['install_type']`
 * Add `recipe[scipy]` to your node's run list.
+
+### Overriding pip Package Versions
+
+For running in a more stable development environment or in production, you may want to hard set the package version installed by pip. To do so, add to or update `node['scipy']['pip_packages']` and (if necessary) remove from `node['scipy']['packages']`. The pip_packages Array accepts package names in requirements format.
+
+For example on Ubuntu 13.04, which installs pandas 0.10.X via package, let's say we'd like to pip install 0.12.0 instead:
+
+Defaults to:
+```
+default['scipy']['packages'] = %w{
+  ipython
+  ipython-notebook
+  python-numpy
+  python-scipy
+  python-matplotlib
+  python-nose
+  python-pandas
+  python-sympy
+}
+default['scipy']['pip_packages'] = %w{}
+```
+
+Let's override pandas installation:
+```
+set['scipy']['packages'] = %w{
+  ipython
+  ipython-notebook
+  python-numpy
+  python-scipy
+  python-matplotlib
+  python-nose
+  python-sympy
+}
+set['scipy']['pip_packages'] = %w{
+  pandas==0.12.0
+}
+```
 
 ## Testing and Development
 

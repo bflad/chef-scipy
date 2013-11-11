@@ -15,9 +15,9 @@ when "debian"
       python-sympy
     }
     default['scipy']['pip_packages'] = %w{
-      ipython
-      scipy
-      pandas
+      ipython>=0.13
+      scipy>=0.10
+      pandas>=0.8
     }
   else
     default['scipy']['packages'] = %w{
@@ -63,12 +63,12 @@ when "rhel"
     python-devel
   }
   default['scipy']['pip_packages'] = %w{
-    ipython
-    numpy
-    scipy
-    matplotlib
-    nose
-    pandas
-    sympy
+    ipython>=0.13
+    numpy>=1.6
+    scipy>=0.10
+    matplotlib>=1.1
+    nose>=1.1
+    pandas>=0.8
+    sympy>=0.7
   }
 end
