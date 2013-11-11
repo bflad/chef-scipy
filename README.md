@@ -51,6 +51,7 @@ Here's how you can quickly get testing or developing against the cookbook thanks
     git clone git://github.com/bflad/chef-scipy.git
     cd chef-scipy
     vagrant plugin install vagrant-berkshelf
+    vagrant plugin install vagrant-cachier
     vagrant plugin install vagrant-omnibus
     vagrant up BOX # BOX being centos6, ubuntu1204, ubuntu1210, or ubuntu1304
 
