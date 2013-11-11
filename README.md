@@ -53,7 +53,7 @@ Here's how you can quickly get testing or developing against the cookbook thanks
     vagrant plugin install vagrant-berkshelf
     vagrant plugin install vagrant-cachier
     vagrant plugin install vagrant-omnibus
-    vagrant up BOX # BOX being centos6, ubuntu1204, ubuntu1210, or ubuntu1304
+    vagrant up BOX # BOX being centos6, debian7, fedora18, fedora19, ubuntu1204, ubuntu1210, or ubuntu1304
 
 You can then SSH into the running VM using the `vagrant ssh` command.
 The VM can easily be stopped and deleted with the `vagrant destroy`
