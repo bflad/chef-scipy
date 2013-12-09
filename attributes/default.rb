@@ -1,9 +1,9 @@
 
-default['scipy']['install_type'] = "package"
+default['scipy']['install_type'] = 'package'
 
 case node['platform_family']
-when "debian"
-  if node['platform'] == "ubuntu" && node['platform_version'] == "12.04"
+when 'debian'
+  if node['platform'] == 'ubuntu' && node['platform_version'] == '12.04'
     default['scipy']['packages'] = %w{
       gfortran
       liblapack-dev
@@ -32,7 +32,7 @@ when "debian"
     }
     default['scipy']['pip_packages'] = %w{}
   end
-when "fedora"
+when 'fedora'
   default['scipy']['packages'] = %w{
     ipython
     numpy
@@ -43,7 +43,7 @@ when "fedora"
     sympy
   }
   default['scipy']['pip_packages'] = %w{}
-when "gentoo"
+when 'gentoo'
   default['scipy']['packages'] = %w{
     '>=dev-python/ipython-0.13'
     '>=dev-python/matplotlib-1.1'
@@ -54,7 +54,7 @@ when "gentoo"
     '>=sci-libs/scipy-0.10'
   }
   default['scipy']['pip_packages'] = %w{}
-when "rhel"
+when 'rhel'
   default['scipy']['packages'] = %w{
     blas-devel
     freetype-devel
