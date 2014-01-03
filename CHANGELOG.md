@@ -1,3 +1,7 @@
+## 0.3.0
+
+* Enhancement: Migrate from deprecated yum::epel recipe to yum-epel cookbook
+
 ## 0.2.0
 
 * Update pip_packages to requirements format and specify >= SciPy Stack 1.0 requirements by default
