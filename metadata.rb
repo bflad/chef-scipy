@@ -13,6 +13,6 @@ recipe            'scipy::source', 'Installs SciPy via source'
   supports os
 end
 
-%w{ apt python yum }.each do |cb|
+%w{ apt python yum-epel }.each do |cb|
   depends cb
 end
