@@ -10,5 +10,5 @@ end
 
 python_pip 'ipython' do
   action :upgrade
-  only_if { node['platform'] == 'fedora' && node['platform_family'] <= 17 }
+  only_if { node['platform'] == 'fedora' && node['platform_version'] <= 17 }
 end
