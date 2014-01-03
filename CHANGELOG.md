@@ -1,3 +1,7 @@
+## 0.3.1
+
+* Bugfix: Fix platform_version typo in default recipe for Fedora
+
 ## 0.3.0
 
 * Enhancement: Migrate from deprecated yum::epel recipe to yum-epel cookbook
