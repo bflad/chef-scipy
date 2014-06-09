@@ -13,12 +13,12 @@ when 'debian'
       python-nose
       python-numpy
       python-sympy
-)
+    )
     default['scipy']['pip_packages'] = %w(
       ipython>=0.13
       scipy>=0.10
       pandas>=0.8
-)
+    )
   else
     default['scipy']['packages'] = %w(
       ipython
@@ -29,7 +29,7 @@ when 'debian'
       python-nose
       python-pandas
       python-sympy
-)
+    )
     default['scipy']['pip_packages'] = %w()
   end
 when 'fedora'
@@ -41,7 +41,7 @@ when 'fedora'
     python-nose
     python-pandas
     sympy
-)
+  )
   default['scipy']['pip_packages'] = %w()
 when 'gentoo'
   default['scipy']['packages'] = %w(
@@ -52,7 +52,7 @@ when 'gentoo'
     '>=dev-python/pandas-0.8'
     '>=dev-python/sympy-0.7'
     '>=sci-libs/scipy-0.10'
-)
+  )
   default['scipy']['pip_packages'] = %w()
 when 'rhel'
   default['scipy']['packages'] = %w(
@@ -61,7 +61,7 @@ when 'rhel'
     lapack-devel
     libpng-devel
     python-devel
-)
+  )
   default['scipy']['pip_packages'] = %w(
     ipython>=0.13
     numpy>=1.6
@@ -70,5 +70,5 @@ when 'rhel'
     nose>=1.1
     pandas>=0.8
     sympy>=0.7
-)
+  )
 end
